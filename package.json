@@ -1,0 +1,40 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all -p dev:*",
+    "dev:css": "npx @tailwindcss/cli -i ./src/styles/tailwind.css -o ./_site/output.css --watch",
+    "dev:11ty": "eleventy --serve --quiet",
+    "build": "npm run build:css && eleventy",
+    "build:css": "NODE_ENV=production postcss src/styles/tailwind.css -o src/assets/main.css",
+    "preview": "npx serve _site -l 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mirovsky/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mirovsky/portfolio/issues"
+  },
+  "homepage": "https://github.com/Mirovsky/portfolio#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/postcss": "^4.1.16",
+    "@tailwindcss/typography": "^0.5.19",
+    "autoprefixer": "^10.4.21",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.16"
+  }
+}

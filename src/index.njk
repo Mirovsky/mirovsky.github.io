@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: "Home"
+---
+
+<section class="prose prose-invert">
+  <h1 class="!mb-2">Hello!</h1>
+  <p>I'm {{ site.name }} — I build interactive experiences, installations, and games.</p>
+</section>
+
+<section class="grid md:grid-cols-3 gap-6 mt-10">
+  {% for i in [1,2,3] %}
+  <article class="rounded-lg border border-white/10 p-5 bg-white/5 hover:bg-white/10 transition">
+    <h3 class="font-semibold mb-2">Project {{ i }}</h3>
+    <p class="text-sm text-neutral-300">Short description of the project. Tech, role, highlights.</p>
+  </article>
+  {% endfor %}
+</section>
