@@ -3,21 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title or site.title }}</title>
+  <title>{{ title }} | {{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <link href="/output.css" rel="stylesheet">
 </head>
-<body class="min-h-screen bg-neutral-950 text-neutral-100">
-  <header class="max-w-5xl mx-auto px-6 py-8">
-    <a href="/" class="text-xl font-semibold tracking-tight">{{ site.name }}</a>
-  </header>
-
-  <main class="max-w-5xl mx-auto px-6 py-8">
-    {{ content | safe }}
-  </main>
-
-  <footer class="max-w-5xl mx-auto px-6 py-12 text-sm text-neutral-400">
-    © 2025 {{ site.name }}
-  </footer>
+<body class="min-h-screen bg-neutral-900 text-neutral-100">
+  {{ content | safe }}
 </body>
 </html>
